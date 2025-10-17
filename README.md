@@ -1,4 +1,4 @@
-<h1 align="center">📝 MERN Stack Note Taking App ✨</h1>
+
 
 
 
@@ -9,9 +9,7 @@ Highlights:
 - 🛠️ Build and Test a Fully Functional REST API
 - ⚙️ Rate Limiting with Upstash Redis — a Real-World Concept Explained Simply
 - 🚀 Completely Responsive UI
-- 🌐 Explore HTTP Methods, Status Codes & SQL vs NoSQL
-- 📦 Deployment Guide Included — Add the Live App to Your Resume
-- 📚 Designed for Absolute Beginners
+- 🌐 Explore HTTP Methods, Status Codes
 
 ---
 
