@@ -14,13 +14,12 @@ const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
 // middleware
+// In your backend server.js/app.js file
+
 if (process.env.NODE_ENV !== "production") {
-  app.use(
-    cors({
-      origin: "http://localhost:5173",
-    })
-  );
+  app.use(cors()); // <-- Allows ALL origins (*), which is fine for local development
 }
+
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 app.use(rateLimiter);
 
@@ -41,7 +40,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log("Server started on PORT:", PORT);
+  app.listen(PORT, '127.0.0.1', () => { // <--- Explicitly bind to IPv4 loopback
+  console.log("Server started on PORT:", PORT);
   });
 });
